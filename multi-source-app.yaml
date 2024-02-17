@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: default
+  labels:
+    argocd.argoproj.io/refresh: hard
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  project: default
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  sources:
+  - repoURL: 'https://github.com/argoproj/argocd-example-apps.git'
+    path: helm-guestbook
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - $values_test/values.yaml
+  - repoURL: 'https://github.com/ishitasequeira/values-test.git'
+    targetRevision: HEAD
+    ref: values_test
