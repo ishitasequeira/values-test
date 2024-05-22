@@ -1,0 +1,201 @@
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-8
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-9
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-10
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-5
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-6
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-7
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-1
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-2
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-3
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: busybox-4
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentconfig: busybox
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", "while true ; do date; sleep 1; done;" ]
+  triggers:
+  - type: ConfigChange
